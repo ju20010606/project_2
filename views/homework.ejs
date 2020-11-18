@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/homework.css">
+    <title>Homework</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+    </nav>
+    <div class="containerRight">
+        <h1 class = "homeworkTitle">Homework List:</h1>
+        <!-- <div class="item">
+            <h3 class="itemTitle">Title</h3>
+        </div> -->
+    </div>
+    <div class="containerLeft">
+        <!-- <form action="/homework" method="POST"> -->
+        <input type="text" class="title" placeholder="Title">
+        <input type="submit" value="Add" class="button">
+        <!-- <label for="description">Description:</label> -->
+        <div class="progressBar">
+            <div class ="bar"> <h3 class="barPercentage">0%</h3></div>
+            
+        </div>
+        <textarea name="description" class="description" placeholder="What is the homework about?"></textarea>
+        <!-- </form> -->
+        <br>
+        <br>
+        <button class = "addToList">Add to List</button>
+    </div>
+    
+    <div class = "todoList">
+        <h3 class="titleToDoList">Today's To Do List</h3>
+        <button class ='buttonAddTask'>Add Task</button>
+    </div>
+    
+    <script src="js/homework.js"></script>
+</body>
+
+</html>

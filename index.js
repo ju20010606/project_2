@@ -9,7 +9,7 @@ const isLoggedIn = require('./middleware/isLoggedIn')
 
 app.use(express.urlencoded({extended: false}))
 app.use(session({
-    secret: process.env.SESSION_SECRET,
+    secret:'octopus',
     resave: false,
     saveUninitialized: true
 }))
@@ -31,9 +31,9 @@ app.use('/auth', require('./controllers/auth.js'))
 app.set('view engine', 'ejs')
 app.use(ejsLayouts)
 
+// app.use(express.static(__dirname + '/public'));
 
-
-
+app.use(express.static(__dirname + '/public'));
 app.listen(8000, ()=>{
     console.log('You are listening to port 8000')
 
@@ -45,4 +45,9 @@ app.get('/',(req,res)=>{
 
 app.get('/profile', isLoggedIn, (req, res)=>{
     res.render('profile')
+})
+
+app.get('/homework', (req, res)=>{
+    
+    res.render('homework.ejs')
 })

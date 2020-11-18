@@ -1,14 +1,32 @@
-<h2>Sign Up</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Parisienne&family=Rouge+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Sign Up</title>
+</head>
+<body>
+    <h1 class="signupText">Sign Up</h1>
+   
+    <div class="container">
+        
+        <div class="formContainer">
+            <form method='POST' action='/auth/signup'>
+                
 
-<form method='POST' action='/auth/signup'>
-    <label for='new-name'>Name</label>
-    <input type='text'name='name' id='new-name' >
+                <input class="name" type='text' name='name' id='new-name' placeholder="Name" >
 
-    <label for='new-email'>Email</label>
-    <input type='email'name='email' id='new-email' >
+                <input class="email" type='email'name='email' id='new-email' placeholder="Email" >
 
-    <label for='new-password'>Password</label>
-    <input type='password'name='password' id='new-password' >
-    
-    <input type='submit' value='Sign Up'>
-</form>
+                <input class="password" type='password'name='password' id='new-password' placeholder="Password" >
+                
+                <input class="button" type='submit' value='Sign Up'>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,13 +1,11 @@
 const express = require('express')
-let db = require('../models')
-const passport = require('../config/ppConfig.js')
 const router = express.Router()
+const db = require('../models')
+const passport = require('../config/ppConfig.js')
 
-
-router.get('/login', (req,res)=>{
-     res.render('auth/login')
+router.get('/signup', (req, res)=>{
+    res.render('auth/signup')
 })
-
 
 router.post('/signup', (req, res)=>{
     db.user.findOrCreate({
@@ -32,44 +30,27 @@ router.post('/signup', (req, res)=>{
         }
     })
     .catch(err =>{ // !-> FLASH <-!
-        req.flash('error', err.message) 
+        req.flash('error', error.message) 
         res.redirect('/auth/signup')
     })
 })
 
-
-
-router.get('/signup', (req,res)=>{
-    res.render('auth/signup')
+router.get('/login', (req, res)=>{
+    res.render('auth/login')
 })
-
-router.get('/logout', (req, res)=>{
-    req.logout()
-    req.flash('success','You successufully logged out')
-    res.redirect('/')
-})
-
 
 router.post('/login', passport.authenticate('local', {
-    failureRedirect: '/auth/login',
-    successRedirect: '/',
-    failureFlash: 'Invalid username and/or password.',
-    successFlash: 'You are now logged in.'
-}))
+        failureRedirect: '/auth/login',
+        successRedirect: '/', // !-> FLASH <-!
+        failureFlash: 'Invalid username and/or password.',
+        successFlash: 'You are now logged in.'
+    })
+)
 
-
-module.exports = router
-
-
-
-
-
-
-
-
-
-
-
-
+router.get('/logout', (req, res)=>{
+    req.logout() // !-> FLASH <-!
+    req.flash('Success! You\'re logged out.')
+    res.redirect('/')
+})
 
 module.exports = router

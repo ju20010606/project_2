@@ -1,0 +1,168 @@
+
+nav{
+    height: 60px;
+    width: 100%;
+    background-color: rgb(58,58,58);
+    
+}
+.calendarNumber{
+    color: rgb(58,58,58);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+.todoList{
+    height: 640px;
+    width: 320px;
+    margin-top: 10px;
+    background-color: rgb(58,58,58);
+    display: inline-block;
+    box-shadow: 0px 4px 5px 2px rgb(229,229,229);
+    vertical-align: top;
+    text-align: center;
+}
+.calendar{
+   height: 640px;
+   width: 850px; 
+   box-shadow: 0px 4px 5px 2px rgb(229,229,229);
+   display: inline-block ;
+   margin: 10px 10px;
+   vertical-align: top;
+   text-align: left;
+}
+
+.buttonsContainer{
+    display: inline-block;
+    background-color: transparent;
+    height: 640px;
+    width: 225px;
+}
+
+.buttons{
+    margin: 20%;
+    background-color: rgb(58,58,58);
+    box-shadow: 0px 4px 5px 2px rgb(229,229,229);
+    width: 150px;
+    height: 100px; 
+    display: block;
+    text-align:center;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 20px;
+ 
+    
+}
+
+
+.calendarBanner{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(58,58,58);
+    text-align:center;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    vertical-align: top;
+    line-height: 60px;
+}
+.datesContainer{
+    width: 830px;
+    height: 550px;
+    margin: 10px;
+
+  
+}
+.calendarDates{
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    margin: 10px 0px 5px 20px;
+    box-shadow: 0px 4px 5px 2px rgb(229,229,229);
+    text-align: left;
+    vertical-align: top;
+}
+
+.titleToDoList{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+.circle{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    background-color: white;
+    margin: 30px;
+   
+}
+
+button{
+    display: inline;
+    background-color: rgb(58,58,58);
+    border: transparent;
+    color: white;
+    box-shadow: 0px 4px 5px 2px rgb(40,40,40);
+}
+
+button:hover{
+    border: solid 1px white;
+}
+
+p{
+    color: white;
+    margin-left: 30px;
+    width: 200px;
+    text-align: left;
+    
+}
+
+input{
+   
+    margin: 10px;
+    background-color: rgb(58,58,58);
+    margin-left: 10px;
+    box-shadow: 0px 4px 5px 2px rgb(53, 53, 53);
+    border-radius: 10px;
+    display: block;
+}
+
+.taskText{
+    border: 0.5px solid white;
+    display: block;
+}
+
+.taskButton{
+    border: transparent;
+    color: white;
+    display: block;
+}
+
+input, select, textarea{
+    color: white;
+    
+}
+
+.newEvent{
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    top: 250px;
+    left: 600px;
+    background-color: rgb(58,58,58);
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.color{
+    width: 2px;
+    height: 10px;
+    background-color: black;
+    
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
