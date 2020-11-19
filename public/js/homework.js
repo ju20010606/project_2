@@ -12,6 +12,7 @@ let done = 0
 
 
 button.addEventListener('click',()=>{
+    event.preventDefault()
     const h1 = document.createElement('h1')
     h1.innerText = inputTitle.value
     inputTitle.style.display = 'none'

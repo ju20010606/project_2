@@ -1,11 +1,17 @@
-
+<head>
+    <link rel="stylesheet" href="/css/alerts.css">
+</head>
  <% if (alerts.error) { %>
     <% alerts.error.forEach(msg => { %>
-      <%= msg %>
+        <%=  msg %>
     <% }) %>
 <% } %>
 <% if (alerts.success) { %>
     <% alerts.success.forEach(msg => { %>
-        <%= msg %>
+        <div class="alertsContainer">
+       <h4><%= msg %></h4>
+       </div>
     <% }) %>
 <% } %>
+
+<script src="js/alerts.js"></script>

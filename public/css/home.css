@@ -166,3 +166,10 @@ a{
     color: white;
     text-decoration: none;
 }
+.menu{
+    color: white;
+    text-decoration: underline;
+    line-height: 50px;
+    margin-left: 10px;
+    font-family: 'Open Sans', sans-serif;
+}

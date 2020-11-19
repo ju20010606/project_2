@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,37 +7,36 @@
     <title>Homework</title>
 </head>
 <body>
-    <nav>
-        <a href="/">Home</a>
-    </nav>
+    
+
     <div class="containerRight">
         <h1 class = "homeworkTitle">Homework List:</h1>
         <!-- <div class="item">
             <h3 class="itemTitle">Title</h3>
         </div> -->
     </div>
-    <div class="containerLeft">
-        <!-- <form action="/homework" method="POST"> -->
-        <input type="text" class="title" placeholder="Title">
-        <input type="submit" value="Add" class="button">
+  
+    <form class="containerLeft" get>
+       
+        <input name="title" type="text" class="title" placeholder="Title">
+        <input type="button" value="Add" class="button">
         <!-- <label for="description">Description:</label> -->
+        <label for="progressBar">Progress:</label>
         <div class="progressBar">
             <div class ="bar"> <h3 class="barPercentage">0%</h3></div>
             
         </div>
         <textarea name="description" class="description" placeholder="What is the homework about?"></textarea>
-        <!-- </form> -->
         <br>
         <br>
         <button class = "addToList">Add to List</button>
-    </div>
+    </form>
     
     <div class = "todoList">
         <h3 class="titleToDoList">Today's To Do List</h3>
         <button class ='buttonAddTask'>Add Task</button>
     </div>
-    
+    <input type="submit">
     <script src="js/homework.js"></script>
 </body>
 
-</html>
