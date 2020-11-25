@@ -22,6 +22,7 @@ button.addEventListener('click',()=>{
 })
 
 add.addEventListener('click', ()=>{
+    event.preventDefault()
     const h3 = document.createElement('h3')
     const div = document.createElement('div')
     h3.innerText = inputTitle.value

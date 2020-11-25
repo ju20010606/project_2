@@ -7,6 +7,8 @@ const passport = require('./config/ppConfig.js')
 const flash = require('connect-flash')
 const isLoggedIn = require('./middleware/isLoggedIn')
 const db = require('./models')
+const axios = require('axios')
+const { response } = require('express')
 
 app.use(express.urlencoded({extended: false}))
 app.use(session({
@@ -41,7 +43,19 @@ app.listen(process.env.PORT, ()=>{
 })
 
 app.get('/', isLoggedIn,(req,res)=>{
-   res.render('home.ejs')
+    axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=London&units=metric&appid=${process.env.APIKEY}`)
+    .then((response)=>{
+ 
+      let icon = response.data.list[1].weather[0].icon
+      let temp = response.data.list[1].main.temp
+       
+      res.render('home.ejs',{icon:icon , temp:temp})
+      
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+  
 })
 
 app.get('/profile', isLoggedIn, (req, res)=>{
@@ -55,7 +69,7 @@ app.get('/homework', isLoggedIn, (req, res)=>{
             description: req.body.description,
         }
     })
-    .then(([createdUser, wasCreated])=>{
+    .then(([created, wasCreated])=>{
         console.log(createdUser)
     })
     .catch(err =>{ // !-> FLASH <-!

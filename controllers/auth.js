@@ -2,9 +2,10 @@ const express = require('express')
 const router = express.Router()
 const db = require('../models')
 const passport = require('../config/ppConfig.js')
+const axios = require('axios')
 
 router.get('/signup', (req, res)=>{
-    res.render('auth/signup')
+    res.render('signup')
 })
 
 router.post('/signup', (req, res)=>{
@@ -26,17 +27,17 @@ router.post('/signup', (req, res)=>{
         } else { // !-> FLASH <-!
             req.flash('error', 'email already exists, try logging in') 
             // console.log('An account associated with that email address already exists! Did you mean to login?')
-            res.redirect('/auth/login')
+            res.redirect('login')
         }
     })
     .catch(err =>{ // !-> FLASH <-!
-        req.flash('error', error.message) 
-        res.redirect('/auth/signup')
+        req.flash('error', err.message) 
+        res.redirect('signup')
     })
 })
 
 router.get('/login', (req, res)=>{
-    res.render('auth/login')
+    res.render('login')
 })
 
 router.post('/login', passport.authenticate('local', {

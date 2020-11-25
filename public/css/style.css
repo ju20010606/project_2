@@ -1,0 +1,12 @@
+img{
+    position: absolute;
+    top: -15px;
+    left: 1300px;
+}
+.temp{
+    position: absolute;
+    top: 5px;
+    left: 1250px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}

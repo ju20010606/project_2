@@ -25,6 +25,9 @@
         <a class= "menu" href="/">Home</a>
         <a class="menu" href="/profile">Profile</a>
         <a class="menu" href="/homework">Homework</a>
+        <h3 class="temp"><%= Math.round(temp) %>°C </h3>
+        <img src='http://openweathermap.org/img/wn/<%= icon  %>@2x.png'><img/>
+        
     </nav>
     <%-include('partials/alerts')%> 
     <%- body %> 
